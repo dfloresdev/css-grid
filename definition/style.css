@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  display: grid;
+  /* Define el tamaño de las columnas */
+  /* grid-template-columns: repeat(7, 1fr); */
+  grid-template-columns: [colums-start] 1fr [line2] 1fr [line3] 1fr [destacado1-end] 1fr [line5] 1fr [destacado2-end] 1fr [linea7] 1fr [columns-end];
+  /* grid-template-rows: repeat(2, 200px); */
+  grid-template-rows: [rows-start] 200px [row2] 200px [rows-end];
+  /* grid-gap: 10px; */
+  height: 100vh;
+  grid-gap: 5px;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/* Seleccionamos el número del elemento que se va a modificar */
+
+.item:nth-of-type(1) {
+  background: lightpink;
+  grid-column: colums-start / destacado1-end;
+  grid-row: rows-start / rows-end;
+  /* grid-column: 1 / span 3;
+  grid-row: 1 / span 2; */
+}
+
+.item:nth-of-type(2) {
+  background: lightyellow;
+  grid-column: destacado1-end / destacado2-end;
+  grid-row: rows-start / rows-end;
+  /* grid-column: 4 / span 2;
+  grid-row: 1 / span 2; */
+}
+
+.item:nth-of-type(3) {
+  background: lightgray;
+  grid-column: destacado2-end / columns-end;
+  /* grid-column: 6 / span 2; */
+}
