@@ -1,0 +1,27 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [colums-start] 1fr [line2] 1fr [line3] 1fr [columns-end];
+  grid-template-rows: [rows-start] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [rows-end];
+  height: 100vh;
+  grid-gap: 5px;
+  /* justify-items: center;
+  align-items: center; */
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/* Seleccionamos el número del elemento que se va a modificar */
+
+.item:nth-of-type(5) {
+  background: lightpink;
+  /* align-self: stretch;
+  justify-self: stretch; */
+}
